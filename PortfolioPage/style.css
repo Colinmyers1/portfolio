@@ -3,7 +3,7 @@ body,
 *,
 *::before,
 *::after {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
@@ -12,34 +12,38 @@ body,
 }
 
 .container {
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 1800px;
 }
 
 img {
   display: block;
-  max-width: 80%;
   margin: 0 auto;
 }
 
 .btn {
   padding: 1em 3em;
+  margin: 0 auto;
   border-radius: 1em;
   border: none;
   background-color: #fec27b;
   margin-bottom: 2em;
+  color: #001933;
+  font-weight: 900 !important;
+  text-decoration: none;
 }
 
 .btn:hover,
 .btn:focus {
   cursor: pointer;
   background-color: #ffa02c;
+  color: #001933;
 }
 
 .headshot {
   border-radius: 0 0 1em 1em;
   box-shadow: 5px 5px 5px rgb(138, 138, 138);
   margin-bottom: 3em;
+  max-width: 66%;
 }
 
 h1,
@@ -56,12 +60,19 @@ h1 {
 p {
   margin: 1em 0 1em 0;
   text-align: center;
+  line-height: 1.5;
 }
 
 strong {
   font-size: 3.4rem;
   font-weight: 700;
   display: block;
+}
+
+.nav-link {
+    color: #001933;
+    font-weight: 700;
+    text-align: center;
 }
 
 .section__title {
@@ -81,15 +92,14 @@ strong {
   background-color: #fec27b;
   margin: 0 auto;
   border-radius: 1em 1em 0 0;
-  width: 80%;
-  margin-top: 1.5em;
+  width: 66%;
 }
 
 .my-services,
 .work {
   background-color: #001933e2;
   color: #fff;
-  padding: 2em 0 2em 0;
+  padding: 2em 0;
 }
 
 .section__title--services {
@@ -117,14 +127,28 @@ strong {
 }
 
 .portfolio__img {
-  padding-bottom: 1em;
+  margin-bottom: 2em;
   border-radius: 1em;
 }
 
 footer {
   background-color: #001933;
-  text-align: center;
   padding-top: 3em;
+  color: #fff;
+}
+
+.form-container {
+    padding: 0 2em;
+}
+
+form {
+    color:#fec27b;
+    margin: 0 2em;
+}
+
+label {
+    color: #fff;
+    text-align: left;
 }
 
 .social-icons {
@@ -133,6 +157,12 @@ footer {
   justify-content: space-evenly;
   padding: 2em 0 2em 0;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+.social-icon__link:hover,
+.social-icon__link:focus { 
+    color: #ffa02c;
 }
 
 .social-icon__link,
@@ -141,11 +171,6 @@ footer {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3rem;
-}
-
-nav,
-.logo {
-  display: none;
 }
 
 @media (min-width: 600px) {
@@ -165,13 +190,7 @@ nav,
     display: inline;
   }
 
-  .container {
-    align-self: flex-end;
-    flex-shrink: 2;
-    width: 40%;
-  }
-
-  .row {
+  .services-row {
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -187,12 +206,12 @@ nav,
   }
 
   .col-left {
-    height: 100vh;
+    height: 90vh;
     min-width: 40vw;
     background-image: url(/Images/ADK.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
   }
 
   .section__title--about, 
@@ -207,13 +226,17 @@ nav,
 }
 
 @media (min-width: 900px) {
+    .intro {
+        margin: 0 auto;
+    }
+
   .section__title,
   strong {
       font-size: 3rem;
   }
 
   .section__title--intro {
-    padding-left: 1em;
+    padding-left: 7vw;
 }
   
     .full-body,
@@ -222,19 +245,21 @@ nav,
   }
 
   .about__body {
-      padding-top: 10em;
+      padding: 0 2em;
   }
 
   .portfolio {
   display: grid;
-  grid-template-columns: 33% 33% 33%;;
-  grid-template-rows: 220px 220px;
-  justify-content: center;
-  align-content: center;
-  padding: 2em 0 2em 4em;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em;
+  margin: 2em 0;
 }
 
 .portfolio__img {
-    padding: 0;
-    margin: 0;
+    border-radius: 1em;
+}
+
+form {
+    max-width: 50%;
+    margin: 0 auto;
 }
