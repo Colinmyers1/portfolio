@@ -15,32 +15,126 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/cd25b12fac.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function (f, b) {
+        if (!b.__SV) {
+          var e, g, i, h;
+          window.mixpanel = b;
+          b._i = [];
+          b.init = function (e, f, c) {
+            function g(a, d) {
+              var b = d.split(".");
+              2 == b.length && ((a = a[b[0]]), (d = b[1]));
+              a[d] = function () {
+                a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
+              };
+            }
+            var a = b;
+            "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel");
+            a.people = a.people || [];
+            a.toString = function (a) {
+              var d = "mixpanel";
+              "mixpanel" !== c && (d += "." + c);
+              a || (d += " (stub)");
+              return d;
+            };
+            a.people.toString = function () {
+              return a.toString(1) + ".people (stub)";
+            };
+            i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+              " "
+            );
+            for (h = 0; h < i.length; h++) g(a, i[h]);
+            var j = "set set_once union unset remove delete".split(" ");
+            a.get_group = function () {
+              function b(c) {
+                d[c] = function () {
+                  call2_args = arguments;
+                  call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                  a.push([e, call2]);
+                };
+              }
+              for (
+                var d = {},
+                  e = ["get_group"].concat(
+                    Array.prototype.slice.call(arguments, 0)
+                  ),
+                  c = 0;
+                c < j.length;
+                c++
+              )
+                b(j[c]);
+              return d;
+            };
+            b._i.push([e, f, c]);
+          };
+          b.__SV = 1.2;
+          e = f.createElement("script");
+          e.type = "text/javascript";
+          e.async = !0;
+          e.src =
+            "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+              ? MIXPANEL_CUSTOM_LIB_URL
+              : "file:" === f.location.protocol &&
+                "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+              ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+              : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+          g = f.getElementsByTagName("script")[0];
+          g.parentNode.insertBefore(e, g);
+        }
+      })(document, window.mixpanel || []);
+      mixpanel.init("3b1faa5bc84c05b5244731d6dbdb4284", {
+        batch_requests: true,
+      });
+    </script>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="/Images/CM-Logo.png" alt="CM" />
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#intro" class="nav__link">Intro</a>
-          </li>
-          <li class="nav__item">
-            <a href="#my-services" class="nav__link">My Services</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-        </ul>
+      <nav class="navbar navbar-light navbar-expand-lg">
+        <a href="#" class="navbar-brand"
+          ><img src="/Images/CM-Logo.png" alt="CM"
+        /></a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="navbar-item">
+              <a href="#my-services" class="nav-link">Services</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#work" class="nav-link">Work</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -49,7 +143,7 @@
       <h1 class="section__title section__title--intro">
         Hi, I'm <strong>Colin Myers</strong>
       </h1>
-      <div class="container">
+      <div class="intro-container">
         <p class="section__subtitle section__subtitle--intro">
           Frontend Web Developer
         </p>
@@ -65,7 +159,7 @@
     <section class="my-services" id="my-services">
       <h2 class="section__title section__title--services">What I do</h2>
       <div class="services">
-        <div class="row">
+        <div class="services-row">
           <div class="service">
             <h3 class="service-title">Squarespace</h3>
             <p class="service-description">
@@ -92,7 +186,7 @@
           </div>
         </div>
         <div class="row">
-          <button href="#work" class="btn">View my work</button>
+          <a href="#work" class="btn">View my work</a>
         </div>
       </div>
     </section>
@@ -103,23 +197,24 @@
         <div class="col-left"></div>
         <div class="about__body col">
           <h2 class="section__title section__title--about">Get to know me</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p class="about__body">
+            About halfway through college I got an internship with a local
+            startup incubator. I was placed in a small company of about ten
+            people bringing clinical trials to private practices and health
+            systems. I found myself in a couple different roles until I finally
+            settled into the technology team as a project manager.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p class="about__body">
+            From there, my interest in software really took off. I enjoyed
+            working with the developers and I wanted to get a deeper
+            understanding of the work they did on a day-to-day basis. It's one
+            thing to know the business strategy and deliverables, but I wanted
+            to understand the technical implimentation as well.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p class="about__body">
+            When I'm not working or learning more about web development I like
+            to hike in the Adirondack Mountains, cook delicious meals, and spend
+            time with my dog Sadie and my fiance, Madison.
           </p>
         </div>
       </div>
@@ -129,7 +224,8 @@
     <section class="work" id="work">
       <h2 class="section__title section__title--work">My work</h2>
       <p class="section__subtitle">Some of the things I have created</p>
-      <div class="portfolio">
+        <div class="portfolio">
+      
         <a
           href="https://codepen.io/colinmyers1/full/BazWLMK"
           class="portfolio__item"
@@ -204,22 +300,80 @@
       </div>
     </section>
 
-    <footer>
-      <a href="mailto:colinmyers96@gmail.com" class="footer-link"
-        >colinmyers96@gmail.com</a
-      >
+    <footer id="contact">
+      <h2 class="section__title section__title--contact">Let's talk!</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <div class="row form-group">
+          <label for="firstName" class="col-sm-3">First name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="firstName" name="firstName"/>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="lastName" class="col-sm-3">Last name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="lastName" name="lastName"/>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="email" class="col-sm-3">Email</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="email" name="email" />
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="phone" class="col-sm-3">Phone</label>
+          <div class="col-sm-9">
+            <input type="tel" class="form-control" id="phone" name="phone"/>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <label for="message" class="col-sm-3">Message</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" id="message" name="message"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 offset-sm-3">
+            <button type="submit" class="btn">Send message</button>
+          </div>
+        </div>
+        
+      </div>
+      </form>
+
+
       <ul class="social-icons">
         <li class="social-icon__item">
-          <a href="#" class="social-icon__link">A</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/colinmyers1"
+            class="social-icon__link"
+            ><i class="fab fa-github"></i>
+          </a>
         </li>
         <li class="social-icon__item">
-          <a href="#" class="social-icon__link">B</a>
+          <a
+            target="_blank"
+            href="https://linkedin.com/in/colinmyers1"
+            rel="noopener noreferrer"
+            class="social-icon__link"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </li>
         <li class="social-icon__item">
-          <a href="#" class="social-icon__link">C</a>
-        </li>
-        <li class="social-icon__item">
-          <a href="#" class="social-icon__link">D</a>
+          <a
+            target="_blank"
+            href="https://codepen.io/colinmyers1"
+            rel="noopener noreferrer"
+            class="social-icon__link"
+            ><i class="fab fa-codepen"></i
+          ></a>
         </li>
       </ul>
     </footer>
