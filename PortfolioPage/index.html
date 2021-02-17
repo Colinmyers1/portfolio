@@ -31,78 +31,15 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script>
-      (function (f, b) {
-        if (!b.__SV) {
-          var e, g, i, h;
-          window.mixpanel = b;
-          b._i = [];
-          b.init = function (e, f, c) {
-            function g(a, d) {
-              var b = d.split(".");
-              2 == b.length && ((a = a[b[0]]), (d = b[1]));
-              a[d] = function () {
-                a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
-              };
-            }
-            var a = b;
-            "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel");
-            a.people = a.people || [];
-            a.toString = function (a) {
-              var d = "mixpanel";
-              "mixpanel" !== c && (d += "." + c);
-              a || (d += " (stub)");
-              return d;
-            };
-            a.people.toString = function () {
-              return a.toString(1) + ".people (stub)";
-            };
-            i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
-              " "
-            );
-            for (h = 0; h < i.length; h++) g(a, i[h]);
-            var j = "set set_once union unset remove delete".split(" ");
-            a.get_group = function () {
-              function b(c) {
-                d[c] = function () {
-                  call2_args = arguments;
-                  call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
-                  a.push([e, call2]);
-                };
-              }
-              for (
-                var d = {},
-                  e = ["get_group"].concat(
-                    Array.prototype.slice.call(arguments, 0)
-                  ),
-                  c = 0;
-                c < j.length;
-                c++
-              )
-                b(j[c]);
-              return d;
-            };
-            b._i.push([e, f, c]);
-          };
-          b.__SV = 1.2;
-          e = f.createElement("script");
-          e.type = "text/javascript";
-          e.async = !0;
-          e.src =
-            "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
-              ? MIXPANEL_CUSTOM_LIB_URL
-              : "file:" === f.location.protocol &&
-                "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
-              ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
-              : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
-          g = f.getElementsByTagName("script")[0];
-          g.parentNode.insertBefore(e, g);
-        }
-      })(document, window.mixpanel || []);
-      mixpanel.init("3b1faa5bc84c05b5244731d6dbdb4284", {
-        batch_requests: true,
-      });
-    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKRH9Y4PZB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKRH9Y4PZB');
+</script>
   </head>
   <body>
     <header>
@@ -223,85 +160,90 @@
     <!--My Work-->
     <section class="work" id="work">
       <h2 class="section__title section__title--work">My work</h2>
-      <p class="section__subtitle">Some of the things I have created</p>
-        <div class="portfolio">
-      
-        <a
-          href="https://codepen.io/colinmyers1/full/BazWLMK"
-          class="portfolio__item"
-          target="_blank"
-        >
-          <img
-            src="/Images/Sign-up-form.png"
-            alt="Sign up form"
-            class="portfolio__img"
-          />
-        </a>
-        <a
-          href="https://codepen.io/colinmyers1/full/OJXBexN"
-          class="portfolio__item"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/Images/Blog-Post.png"
-            alt="Blog post"
-            class="portfolio__img"
-          />
-        </a>
-        <a
-          href="https://codepen.io/colinmyers1/full/wvGVPQM"
-          class="portfolio__item"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/Images/BBQ-Post.png"
-            alt="BBQ Post"
-            class="portfolio__img"
-          />
-        </a>
-        <a
-          href="https://codepen.io/colinmyers1/full/mdVdPrX"
-          class="portfolio__item"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/Images/Login.png"
-            alt="Login screen"
-            class="portfolio__img"
-          />
-        </a>
-        <a
-          href="https://codepen.io/colinmyers1/full/RwRoXrz"
-          class="portfolio__item"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/Images/Music Card.png"
-            alt="Music Card"
-            class="portfolio__img"
-          />
-        </a>
-        <a
-          href="https://codepen.io/colinmyers1/full/yLJmYzx"
-          class="portfolio__item"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/Images/Feature-Page.png"
-            alt="Feature Page"
-            class="portfolio__img"
-          />
-        </a>
+      <p class="section__subtitle">A few of the projects I have created</p>
+        
+      <div class="portfolio container">
+        <div class="row">
+
+          <!--Project 1-->
+          <div class="card">
+            <a href="https://codepen.io/colinmyers1/full/BazWLMK" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/Sign-up-form.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Sign-up form</h3>
+              <p class="card-text">A form complete with client-side validation using JavaScript.</p>
+              <a href="https://codepen.io/colinmyers1/full/BazWLMK" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+
+           <!--Project 2-->
+          <div class="card">
+            <a href="https://codepen.io/colinmyers1/full/OJXBexN" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/Blog-Post.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Blog post</h3>
+              <p class="card-text">A responsive blog post card using flexbox.</p>
+              <a href="https://codepen.io/colinmyers1/full/OJXBexN" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+
+           <!--Project 3-->
+          <div class="card  ">
+            <a href="https://codepen.io/colinmyers1/full/wvGVPQM" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/BBQ-Post.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Splash page</h3>
+              <p class="card-text">A registration page using DOM manipulation for confirmation.</p>
+              <a href="https://codepen.io/colinmyers1/full/wvGVPQM" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!--Project 4-->
+          <div class="card  ">
+            <a href="https://codepen.io/colinmyers1/full/mdVdPrX" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/Login.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">COVID-19 Questionnaire</h3>
+              <p class="card-text">A form built using HTML, CSS, and client-side validation.</p>
+              <a href="https://codepen.io/colinmyers1/full/mdVdPrX" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+
+           <!--Project 5-->
+          <div class="card  ">
+            <a href="https://codepen.io/colinmyers1/full/RwRoXrz" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/Music Card.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Flip Card</h3>
+              <p class="card-text">A project using CSS transitions and Spotify embed for music.</p>
+              <a href="https://codepen.io/colinmyers1/full/RwRoXrz" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+
+           <!--Project 6-->
+          <div class="card  ">
+            <a href="https://codepen.io/colinmyers1/full/yLJmYzx" target="_blank" rel="noopener noreferrer">
+              <img class="card-img-top" src="/Images/Feature-Page.png" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Clipboard Landing Page</h3>
+              <p class="card-text">A HTML & CSS landing page challenge including hover states.</p>
+              <a href="https://codepen.io/colinmyers1/full/yLJmYzx" class="btn" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>
+          </div>
+        </div>
+          
       </div>
     </section>
 
     <footer id="contact">
-      <h2 class="section__title section__title--contact">Let's talk!</h2>
       <form name="contact" method="POST" data-netlify="true">
         <div class="row form-group">
           <label for="firstName" class="col-sm-3">First name</label>

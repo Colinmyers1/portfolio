@@ -12,7 +12,7 @@ body,
 }
 
 .container {
-  max-width: 1800px;
+  max-width: 2400px;
 }
 
 img {
@@ -26,7 +26,6 @@ img {
   border-radius: 1em;
   border: none;
   background-color: #fec27b;
-  margin-bottom: 2em;
   color: #001933;
   font-weight: 900 !important;
   text-decoration: none;
@@ -59,7 +58,6 @@ h1 {
 
 p {
   margin: 1em 0 1em 0;
-  text-align: center;
   line-height: 1.5;
 }
 
@@ -123,12 +121,31 @@ strong {
 }
 
 .about__body {
-  padding: 0em 2em 0em 2em;
+  padding: 0em 2em;
 }
 
-.portfolio__img {
+.portfolio {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 300px;
   margin-bottom: 2em;
-  border-radius: 1em;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-title,
+.card-body {
+    text-align: left;
+    color: #001933;
 }
 
 footer {
@@ -217,11 +234,15 @@ label {
   .section__title--about, 
   .about__body > p {
     text-align: left;
-    margin-left: 0;
+    margin-left: .5em;
   }
 
   .about__body {
-    padding-top: 5em;
+    padding-top: 5em 2em;
+}
+
+.card + .card{
+  margin-left: 2em;
 }
 }
 
@@ -248,18 +269,12 @@ label {
       padding: 0 2em;
   }
 
-  .portfolio {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 1em;
-  margin: 2em 0;
-}
-
-.portfolio__img {
-    border-radius: 1em;
-}
-
 form {
     max-width: 50%;
     margin: 0 auto;
+}
+
+.item {
+    padding: 1em;
+    margin: 5em;
 }
