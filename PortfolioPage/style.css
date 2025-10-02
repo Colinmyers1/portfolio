@@ -6,7 +6,9 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: "p22-fllw-eaglefeather", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   max-width: 2400px;
 }
@@ -50,6 +52,9 @@ h2,
 h3 {
   line-height: 1;
   margin: 0;
+  font-family: "p22-fllw-eaglefeather-sc", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h1 {
@@ -277,4 +282,4 @@ form {
 .item {
     padding: 1em;
     margin: 5em;
-}
+}}
